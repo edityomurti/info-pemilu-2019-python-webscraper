@@ -1,0 +1,138 @@
+[
+  {
+    "name": "ACEH",
+    "prov_id": "1"
+  },
+  {
+    "name": "SUMATERA UTARA",
+    "prov_id": "6728"
+  },
+  {
+    "name": "SUMATERA BARAT",
+    "prov_id": "12920"
+  },
+  {
+    "name": "RIAU",
+    "prov_id": "14086"
+  },
+  {
+    "name": "JAMBI",
+    "prov_id": "15885"
+  },
+  {
+    "name": "SUMATERA SELATAN",
+    "prov_id": "17404"
+  },
+  {
+    "name": "BENGKULU",
+    "prov_id": "20802"
+  },
+  {
+    "name": "LAMPUNG",
+    "prov_id": "22328"
+  },
+  {
+    "name": "KEPULAUAN RIAU",
+    "prov_id": "25405"
+  },
+  {
+    "name": "JAWA BARAT",
+    "prov_id": "26141"
+  },
+  {
+    "name": "KEPULAUAN BANGKA BELITUNG",
+    "prov_id": "24993"
+  },
+  {
+    "name": "DKI JAKARTA",
+    "prov_id": "25823"
+  },
+  {
+    "name": "JAWA TENGAH",
+    "prov_id": "32676"
+  },
+  {
+    "name": "DAERAH ISTIMEWA YOGYAKARTA",
+    "prov_id": "41863"
+  },
+  {
+    "name": "JAWA TIMUR",
+    "prov_id": "42385"
+  },
+  {
+    "name": "BANTEN",
+    "prov_id": "51578"
+  },
+  {
+    "name": "BALI",
+    "prov_id": "53241"
+  },
+  {
+    "name": "NUSA TENGGARA BARAT",
+    "prov_id": "54020"
+  },
+  {
+    "name": "NUSA TENGGARA TIMUR",
+    "prov_id": "55065"
+  },
+  {
+    "name": "KALIMANTAN BARAT",
+    "prov_id": "58285"
+  },
+  {
+    "name": "KALIMANTAN TENGAH",
+    "prov_id": "60371"
+  },
+  {
+    "name": "KALIMANTAN SELATAN",
+    "prov_id": "61965"
+  },
+  {
+    "name": "KALIMANTAN TIMUR",
+    "prov_id": "64111"
+  },
+  {
+    "name": "SULAWESI UTARA",
+    "prov_id": "65702"
+  },
+  {
+    "name": "SULAWESI TENGAH",
+    "prov_id": "67393"
+  },
+  {
+    "name": "SULAWESI SELATAN",
+    "prov_id": "69268"
+  },
+  {
+    "name": "SULAWESI TENGGARA",
+    "prov_id": "72551"
+  },
+  {
+    "name": "GORONTALO",
+    "prov_id": "74716"
+  },
+  {
+    "name": "SULAWESI BARAT",
+    "prov_id": "75425"
+  },
+  {
+    "name": "MALUKU",
+    "prov_id": "76096"
+  },
+  {
+    "name": "MALUKU UTARA",
+    "prov_id": "77085"
+  },
+  {
+    "name": "PAPUA",
+    "prov_id": "78203"
+  },
+  {
+    "name": "PAPUA BARAT",
+    "prov_id": "81877"
+  },
+  {
+    "name": "KALIMANTAN UTARA",
+    "prov_id": "928068"
+  }
+]

@@ -1,0 +1,2 @@
+import get_partai
+
