@@ -30,14 +30,14 @@ def generateCSV(idDapil, idPartai, idPro):
 	data = getData(idDapil, idPartai, idPro)
 
 	# Generating CSV
-	csv_file = 'data_caleg_prov.csv'
+	csv_file = BASE_LOCAL_PATH + 'data_caleg_prov.csv'
 	if (idDapil == "1" and idPartai == "1"):
 		print("GENERATING CSV Caleg DPRD PROV di Dapil=" + idDapil + " , Partai=" + idPartai + " ...")
-		caleg_dpr_data = open(BASE_LOCAL_PATH + csv_file, 'w')
+		caleg_prov_data = open(csv_file, 'w')
 		status_data = " -GENERATED"
 	else :
 		print("Appending CSV Caleg DPRD PROV di Dapil=" + idDapil + " , Partai=" + idPartai + " ...")
-		caleg_dpr_data = open(BASE_LOCAL_PATH + csv_file, 'a')
+		caleg_prov_data = open(csv_file, 'a')
 		status_data = " -appended"
 
 	csvwriter = csv.writer(caleg_prov_data)
@@ -46,8 +46,8 @@ def generateCSV(idDapil, idPartai, idPro):
 
 	headers = set([])
 
-	if not (count != 0 and idDapil != "1" and idPartai != "1"):
-		with open(BASE_LOCAL_PATH + csv_file, newline='') as f:
+	if not (count != 0 and idDapil != "81" and idPartai != "1"):
+		with open(csv_file, newline='') as f:
 			reader = csv.reader(f)
 			for row in reader:
 				if count == 0:
@@ -58,10 +58,10 @@ def generateCSV(idDapil, idPartai, idPro):
 		caleg_prov['idPartai'] = int(idPartai)
 		caleg_prov['idDapil'] = int(idDapil)
 		caleg_prov['idPro'] = int(idPro)
-		if count == 0 and idDapil == "1" and idPartai == "1":
+		if len(headers) == 0:
 			headers = caleg_prov.keys()
 			csvwriter.writerow(headers)
-			count += 1			
+			count += 1	
 
 		row_data = []
 		for header in headers:
