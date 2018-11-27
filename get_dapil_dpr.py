@@ -22,7 +22,7 @@ def getData(idWilayah, namaWilayah):
 		data = ""
 	return data
 
-def generateCSV(idWilayah, namaWilayah):
+def generateCSV(idWilayah, namaWilayah, idPro):
 	data = getData(idWilayah, namaWilayah)
 	
 	# Generating CSV
@@ -39,6 +39,7 @@ def generateCSV(idWilayah, namaWilayah):
 	count = 0
 
 	for dapil_dpr in data:
+		dapil_dpr['idPro'] = idPro
 		if count == 0 and idWilayah == "1":
 			header = dapil_dpr.keys()
 			csvwriter.writerow(header)

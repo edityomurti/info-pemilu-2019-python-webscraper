@@ -7,7 +7,7 @@ import csv
 from Constants import *
 from util_logging import *
 
-def getData(idDapil, idPartai):
+def getData(idDapil, idPartai, idPro):
 	try:
 		context = ssl._create_unverified_context()
 
@@ -17,9 +17,9 @@ def getData(idDapil, idPartai):
 		print(link_url)
 
 		url = urllib.request.urlopen(link_url, context = context)
-		data = json.loads(url.read().decode())
+		data = json.loads(url.read().decode("utf-8","ignore"))
 	except Exception as e:
-		message_string = "ERROR Request Caleg DPR RI di idDapil=({}), idPartai=({}) -- {}".format(idDapil,idPartai,str(e))
+		message_string = "ERROR !!! Request Caleg DPR RI di idDapil=({}), idPartai=({}), idPro=({}) -- {}".format(idDapil,idPartai,idPro,str(e))
 		print(message_string)
 		pecker(LOG_CALEG_DPR_DATA, message_string)
 		data = ""
@@ -27,10 +27,9 @@ def getData(idDapil, idPartai):
 
 
 def generateCSV(idDapil, idPartai, idPro):
-	data = getData(idDapil, idPartai)
+	data = getData(idDapil, idPartai, idPro)
 
 	# Generating CSV
-
 	csv_file = 'data_caleg_dpr_ri.csv'
 	if (idDapil == "1" and idPartai == "1"):
 		print("GENERATING CSV Caleg DPR RI di Dapil=" + idDapil + " , Partai=" + idPartai + " ...")
@@ -70,7 +69,7 @@ def generateCSV(idDapil, idPartai, idPro):
 				row_data.append(caleg_dpr[header])
 			else :
 				row_data.append('null')
-				message_string = "WARNING !!! - null found on keys=('{}') in idPartai=({}), idDapil=({}), idPro=({}) ".format(header, idPartai, idDapil, idPro)
+				message_string = "WARNING !!! - null found on keys=('{}') in idPartai=({}), idPro=({}, idDapil=({})) ".format(header, idPartai, idPro, idDapil)
 				print(message_string)
 				pecker(LOG_CALEG_DPR_DATA, message_string)
 		csvwriter.writerow(row_data)
