@@ -3,19 +3,26 @@ import json
 import ssl
 import csv
 from Constants import *
-
-context = ssl._create_unverified_context()
-
-print("Request Daftar Partai ...")
-
-url = urllib.request.urlopen(BASE_URL + 'allparpol.json?', context = context)
-data = json.loads(url.read().decode())
+from util_logging import *
 
 
 def getData():
+	context = ssl._create_unverified_context()
+
+	print("Request Daftar Partai ...")
+
+	try:
+		url = urllib.request.urlopen(BASE_URL + 'allparpol.json?', context = context)
+		data = json.loads(url.read().decode())
+	except Exception as e:
+		message_string = "ERROR request daftar partai --" + str(e)
+		pecker(LOG_PARTAI_DATA, message_string)
+		data = ""
+
 	return data
 
 def generateCSV():
+	data = getData()
 	print("Generating CSV Daftar Partai ...")
 	partai_data = open(BASE_LOCAL_PATH + 'data_partai.csv', 'w')
 
@@ -36,4 +43,5 @@ def generateCSV():
 	message_string = "––– CSV Daftar Partai created ({} data) –––".format(len(data))
 
 	print(message_string)
+	pecker(LOG_PARTAI_DATA, message_string)
 	return

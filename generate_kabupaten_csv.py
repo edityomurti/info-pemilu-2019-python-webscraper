@@ -1,9 +1,16 @@
 import get_provinsi
 import get_kabupaten
+from util_logging import *
+from Constants import *
 
-print ("====== START :: GENERATE DATA KABUPATEN ======")
+message_string = "====== START :: GENERATE DATA KABUPATEN ======"
+print (message_string)
+pecker(LOG_KABUPATEN_DATA, message_string)
+total_data_generated = 0
 
 for data in get_provinsi.getData():
-	get_kabupaten.generateCSV(str(data["idWilayah"]), data["namaWilayah"])
+	total_data_generated += get_kabupaten.generateCSV(str(data["idWilayah"]), data["namaWilayah"])
 
-print ("======  END :: GENERATE DATA KABUPATEN  ======")
+message_string = "====== END :: GENERATE DATA KABUPATEN,  {} data generated ======".format(str(total_data_generated))
+print (message_string)
+pecker(LOG_KABUPATEN_DATA, message_string)
