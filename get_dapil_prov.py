@@ -8,9 +8,9 @@ from util_logging import *
 def getData(idWilayah, namaWilayah):
 	try:
 		context = ssl._create_unverified_context()
-		link_url = BASE_URL + idWilayah + "/dcs-dpr.json?"
+		link_url = BASE_URL + idWilayah + "/dcs-prov.json?"
 
-		print("Request Daftar DAPIL DPR RI di Provinsi " + namaWilayah + "...")
+		print("Request Daftar DAPIL DPRD PROV di Provinsi " + namaWilayah + "...")
 		print(link_url)
 
 		url = urllib.request.urlopen(link_url, context = context)
@@ -18,7 +18,7 @@ def getData(idWilayah, namaWilayah):
 	except Exception as e:
 		message_string = "ERROR Request idWilayah({}) -- {}".format(idWilayah, str(e))
 		print(message_string)
-		pecker(LOG_DAPIL_DPR_DATA, message_string)
+		pecker(LOG_DAPIL_PROV_DATA, message_string)
 		data = ""
 	return data
 
@@ -26,12 +26,12 @@ def generateCSV(idWilayah, namaWilayah, idPro):
 	data = getData(idWilayah, namaWilayah)
 	
 	# Generating CSV
-	csv_file = 'data_dapil_dpr.csv'
+	csv_file = 'data_dapil_prov.csv'
 	if (idWilayah == "1"):
-		print("GENERATING CSV DAPIL DPR RI di Provinsi " + namaWilayah + "...")
+		print("GENERATING CSV DAPIL DPRD PROV di Provinsi " + namaWilayah + "...")
 		dapil_dpr_data = open(BASE_LOCAL_PATH + csv_file, 'w')
 	else :
-		print("Appending  CSV DAPIL DPR RI di Provinsi " + namaWilayah + "...")
+		print("Appending  CSV DAPIL DPRD PROV Provinsi " + namaWilayah + "...")
 		dapil_dpr_data = open(BASE_LOCAL_PATH + csv_file, 'a')
 
 	csvwriter = csv.writer(dapil_dpr_data)
@@ -49,8 +49,8 @@ def generateCSV(idWilayah, namaWilayah, idPro):
 
 	dapil_dpr_data.close()
 
-	message_string = "––– CSV Daftar DAPIL DPR RI di Provinsi " + namaWilayah + " created ({} data) –––".format(len(data))
+	message_string = "––– CSV Daftar DAPIL DPRD PROV di Provinsi " + namaWilayah + " created ({} data) –––".format(len(data))
 
 	print(message_string)
-	pecker(LOG_DAPIL_DPR_DATA, message_string)
+	pecker(LOG_DAPIL_PROV_DATA, message_string)
 	return len(data)

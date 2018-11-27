@@ -4568,3 +4568,39 @@
 27-Nov-18 15:59:51 - ====== START :: APPENDING DATA CALEG DPR RI ======
 27-Nov-18 15:59:52 - ––– CSV Daftar Caleg DPR RI di Dapil=31 , Partai=12  -appended (10 data) –––
 27-Nov-18 15:59:52 - ======  END :: APPENDING DATA CALEG DPR RI,  10 data generated ======
+27-Nov-18 16:41:09 - ====== START :: GENERATE DATA DAPIL DPRD PROV ======
+27-Nov-18 16:41:09 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi ACEH created (10 data) –––
+27-Nov-18 16:41:09 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi SUMATERA UTARA created (12 data) –––
+27-Nov-18 16:41:09 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi SUMATERA BARAT created (8 data) –––
+27-Nov-18 16:41:10 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi RIAU created (8 data) –––
+27-Nov-18 16:41:10 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi JAMBI created (6 data) –––
+27-Nov-18 16:41:10 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi SUMATERA SELATAN created (10 data) –––
+27-Nov-18 16:41:10 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi BENGKULU created (7 data) –––
+27-Nov-18 16:41:10 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi LAMPUNG created (8 data) –––
+27-Nov-18 16:41:10 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi KEPULAUAN RIAU created (7 data) –––
+27-Nov-18 16:41:10 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi JAWA BARAT created (15 data) –––
+27-Nov-18 16:41:11 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi KEPULAUAN BANGKA BELITUNG created (6 data) –––
+27-Nov-18 16:41:11 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi DKI JAKARTA created (10 data) –––
+27-Nov-18 16:41:11 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi JAWA TENGAH created (13 data) –––
+27-Nov-18 16:41:11 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi DAERAH ISTIMEWA YOGYAKARTA created (7 data) –––
+27-Nov-18 16:41:11 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi JAWA TIMUR created (14 data) –––
+27-Nov-18 16:41:12 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi BANTEN created (10 data) –––
+27-Nov-18 16:41:12 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi BALI created (9 data) –––
+27-Nov-18 16:41:12 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi NUSA TENGGARA BARAT created (8 data) –––
+27-Nov-18 16:41:12 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi NUSA TENGGARA TIMUR created (8 data) –––
+27-Nov-18 16:41:12 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi KALIMANTAN BARAT created (8 data) –––
+27-Nov-18 16:41:12 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi KALIMANTAN TENGAH created (5 data) –––
+27-Nov-18 16:41:12 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi KALIMANTAN SELATAN created (7 data) –––
+27-Nov-18 16:41:13 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi KALIMANTAN TIMUR created (6 data) –––
+27-Nov-18 16:41:13 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi SULAWESI UTARA created (6 data) –––
+27-Nov-18 16:41:13 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi SULAWESI TENGAH created (6 data) –––
+27-Nov-18 16:41:13 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi SULAWESI SELATAN created (11 data) –––
+27-Nov-18 16:41:13 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi SULAWESI TENGGARA created (6 data) –––
+27-Nov-18 16:41:13 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi GORONTALO created (6 data) –––
+27-Nov-18 16:41:13 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi SULAWESI BARAT created (7 data) –––
+27-Nov-18 16:41:14 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi MALUKU created (7 data) –––
+27-Nov-18 16:41:14 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi MALUKU UTARA created (5 data) –––
+27-Nov-18 16:41:14 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi PAPUA created (7 data) –––
+27-Nov-18 16:41:14 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi PAPUA BARAT created (5 data) –––
+27-Nov-18 16:41:15 - ––– CSV Daftar DAPIL DPRD PROV di Provinsi KALIMANTAN UTARA created (4 data) –––
+27-Nov-18 16:41:15 - ======  END :: GENERATE DATA DAPIL DPD PROV ,  272 data generated ======
