@@ -11,7 +11,10 @@ URL_DCS = "pileg2019/pencalonan/pengajuan-calon/1/1/calonDct.json?"
 LOG_KABUPATEN_DATA = 'log_kabupaten_data.log'
 LOG_PROVINSI_DATA = 'log_provinsi_data.log'
 LOG_PARTAI_DATA = 'log_partai_data.log'
+
 LOG_DAPIL_DPR_DATA = 'log_dapil_dpr_data.log'
 LOG_DAPIL_PROV_DATA = 'log_dapil_prov_data.log'
+LOG_DAPIL_KAB_DATA = 'log_dapil_kab_data.log'
+
 LOG_CALEG_DPR_DATA = 'log_caleg_dpr_data.log'
 LOG_CALEG_PROV_DATA = 'log_caleg_prov_data.log'
