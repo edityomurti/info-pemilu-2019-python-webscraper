@@ -19,6 +19,6 @@ for dataProv in get_provinsi.getData():
 			pecker(LOG_DAPIL_KAB_DATA, message_string)
 		total_data_generated += data_generated
 
-message_string = "======  END :: GENERATE DATA CALEG DPRD KAB,  {} data generated ======".format(str(total_data_generated))
+message_string = "======  END :: GENERATE DATA DAPIL DPRD KAB,  {} data generated ======".format(str(total_data_generated))
 print(message_string)
 pecker(LOG_DAPIL_KAB_DATA, message_string)

@@ -26,7 +26,7 @@ def generateCSV(idWilayah, namaWilayah, idPro):
 	data = getData(idWilayah, namaWilayah)
 	
 	# Generating CSV
-	csv_file = 'data_dapil_dpr.csv'
+	csv_file = 'data_dapil_dpr_ri.csv'
 	if (idWilayah == "1"):
 		print("GENERATING CSV DAPIL DPR RI di Provinsi " + namaWilayah + "...")
 		dapil_dpr_data = open(BASE_LOCAL_PATH + csv_file, 'w')

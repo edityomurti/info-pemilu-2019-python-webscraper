@@ -17,7 +17,7 @@ def getData(idWilayah, namaWilayah):
 		url = urllib.request.urlopen(link_url, context = context)
 		data = json.loads(url.read().decode())
 	except Exception as e:
-		message_string = 'ERROR Request idWilayah(' + idWilayah + ') -- ' + str(e)
+		message_string = 'ERROR !!! Request Daftar Kabupaten idWilayah(' + idWilayah + ') -- ' + str(e)
 		print(message_string)
 		pecker(LOG_DAPIL_DPR_DATA, message_string)
 		data = ""

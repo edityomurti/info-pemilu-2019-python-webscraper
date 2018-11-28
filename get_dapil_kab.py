@@ -53,6 +53,7 @@ def generateCSV(idKab, namaKab, idPro, namaPro):
 
 	for dapil_kab in data:
 		dapil_kab['idPro'] = idPro
+		dapil_kab['idKab'] = idKab
 		if count == 0 and idKab == "2":
 			headers = dapil_kab.keys()
 			csvwriter.writerow(headers)

@@ -18,3 +18,4 @@ LOG_DAPIL_KAB_DATA = 'log_dapil_kab_data.log'
 
 LOG_CALEG_DPR_DATA = 'log_caleg_dpr_data.log'
 LOG_CALEG_PROV_DATA = 'log_caleg_prov_data.log'
+LOG_CALEG_KAB_DATA = 'log_caleg_kab_data.log'
