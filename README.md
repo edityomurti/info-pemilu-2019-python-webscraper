@@ -1,1 +1,1 @@
-# THIS IS AN EXAMPLE OF VERY BAD WEBSCRAPER
+# this is an example of very bad web scraper
