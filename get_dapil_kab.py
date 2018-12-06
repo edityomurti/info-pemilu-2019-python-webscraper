@@ -5,25 +5,25 @@ import csv
 from Constants import *
 from util_logging import *
 
-def getData(idKab, namaKab, namaPro):
+def getData(idKab, namaKab, idPro, namaPro):
 	try:
 		context = ssl._create_unverified_context()
 		link_url = BASE_URL + idKab + "/dcs-kab.json?"
 
-		print("Request Daftar DAPIL DPRD KAB di Provinsi " + namaPro + " , Kabupaten " + namaKab + "...")
+		print("Request Daftar DAPIL DPRD KAB di Provinsi {}, Kabupaten {}, idKab({}), idPro({})  ... ".format(namaPro, namaKab, idKab, idPro))
 		print(link_url)
 
 		url = urllib.request.urlopen(link_url, context = context)
 		data = json.loads(url.read().decode())
 	except Exception as e:
-		message_string = "ERROR Request idKab({}) -- {}".format(idKab, str(e))
+		message_string = "ERROR Request Daftar DAPIL DPRD KAB di Provinsi {}, Kabupaten {}, idKab({}), idPro({}) -- {}".format(namaPro, namaKab, idKab, idPro, str(e))
 		print(message_string)
 		pecker(LOG_DAPIL_KAB_DATA, message_string)
 		data = ""
 	return data
 
 def generateCSV(idKab, namaKab, idPro, namaPro):
-	data = getData(idKab, namaKab, namaPro)
+	data = getData(idKab, namaKab, idPro, namaPro)
 
 	# Generating CSV
 	csv_file = BASE_LOCAL_PATH + 'data_dapil_kab.csv'
