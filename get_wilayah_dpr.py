@@ -16,7 +16,7 @@ def getData(id, indexOf, totalData):
     
     try:
         url_link = 'https://infopemilu.kpu.go.id/pileg2019/api/dapil/{}/0?_=1546094148910'.format(id)
-        print(url_link)
+        print("requesting .. " + url_link)
         
         url = urllib.request.urlopen(url_link, context = context,  timeout=10)
         datatowrite = url.read()
