@@ -1,3 +1,4 @@
+import os
 import urllib.request
 import json
 import ssl
@@ -15,7 +16,6 @@ def getData(id, indexOf, totalData):
         context = ssl._create_unverified_context()
         ssl._create_default_https_context = ssl._create_unverified_context
         
-        file_path = BASE_LOCAL_PATH + 'data_wilayah_dpr/data_wil_dpr_{}.json'
         url_link = 'https://infopemilu.kpu.go.id/pileg2019/api/dapil/{}/0?_=1546094148910'.format(id)
         print("requesting .. " + url_link)
         
@@ -25,7 +25,10 @@ def getData(id, indexOf, totalData):
         
         datatowrite = url.read()
         
-        with open(file_path.format(id), 'w') as f:
+        THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+        file_path = os.path.join(THIS_FOLDER, 'data_wilayah_dpr/data_wil_dpr_{}.json'.format(id))
+
+        with open(file_path, 'wb') as f:
             f.write(datatowrite)
         
         is_file_created = True
