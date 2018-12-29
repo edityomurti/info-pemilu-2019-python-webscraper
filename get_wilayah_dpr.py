@@ -9,6 +9,7 @@ from user_agent import generate_user_agent
 
 def getData(id, indexOf, totalData):
     is_file_created = False
+    message_string = "getting data idProv={}  ({}/{})".format(id, indexOf, totalData)
     
     try:
         context = ssl._create_unverified_context()
