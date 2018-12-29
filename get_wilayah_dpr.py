@@ -45,7 +45,7 @@ try:
     
     id_list = df['idWilayah'].tolist()
     for i,data in enumerate(id_list):
-        if (getData(str(data))):
+        if (getData(str(data), str(i), str(len(id_list)))):
             data_generated += 1
         else:
             data_error += 1
