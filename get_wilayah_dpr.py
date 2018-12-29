@@ -3,7 +3,7 @@ import json
 import ssl
 import pandas as pd
 import csv
-#from Constants_wilayah import *
+from Constants import *
 from util_logging_wilayah_dpr import *
 
 def getData(id, indexOf, totalData):
@@ -15,7 +15,10 @@ def getData(id, indexOf, totalData):
     file_path = 'data_wilayah_dpr/data_wil_dpr_{}.json'
     
     try:
-        url = urllib.request.urlopen('https://infopemilu.kpu.go.id/pileg2019/api/dapil/{}/0?_=1546094148910'.format(id), context = context)
+        url_link = 'https://infopemilu.kpu.go.id/pileg2019/api/dapil/{}/0?_=1546094148910'.format(id)
+        print(url_link)
+        
+        url = urllib.request.urlopen(url_link, context = context,  timeout=10)
         datatowrite = url.read()
         
         with open(file_path.format(id), 'wb') as f:
@@ -36,7 +39,6 @@ try:
     data_generated = 0
     data_error = 0
 
-    message_string = "=== START GENERATING WILAYAH DPR ==="
     print(message_string)
     pecker("", message_string)
     
@@ -44,6 +46,8 @@ try:
     df = pd.read_csv(csv_file)
     
     id_list = df['idWilayah'].tolist()
+    
+    message_string = "=== START GENERATING WILAYAH DPR ==="
     for i,data in enumerate(id_list):
         if (getData(str(data), str(i), str(len(id_list)))):
             data_generated += 1
