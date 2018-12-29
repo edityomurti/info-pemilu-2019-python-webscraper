@@ -25,7 +25,7 @@ def getData(id, indexOf, totalData):
         
         datatowrite = url.read()
         
-        with open(file_path.format(id), 'wb') as f:
+        with open(file_path.format(id), 'w') as f:
             f.write(datatowrite)
         
         is_file_created = True
