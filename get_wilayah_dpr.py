@@ -57,7 +57,7 @@ try:
     pecker("", message_string)
     
     for i,data in enumerate(id_list):
-        if (getData(str(data), str(i), str(len(id_list)))):
+        if (getData(str(data), str(i+1), str(len(id_list)))):
             data_generated += 1
         else:
             data_error += 1
