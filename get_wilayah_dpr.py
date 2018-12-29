@@ -40,9 +40,6 @@ try:
     total_data_generated = 0
     data_generated = 0
     data_error = 0
-
-    print(message_string)
-    pecker("", message_string)
     
     csv_file = 'data_provinsi.csv'
     df = pd.read_csv(csv_file)
@@ -50,6 +47,10 @@ try:
     id_list = df['idWilayah'].tolist()
     
     message_string = "=== START GENERATING WILAYAH DPR ==="
+    
+    print(message_string)
+    pecker("", message_string)
+    
     for i,data in enumerate(id_list):
         if (getData(str(data), str(i), str(len(id_list)))):
             data_generated += 1
