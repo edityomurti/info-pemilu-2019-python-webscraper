@@ -58,7 +58,7 @@ try:
         else:
             data_error += 1
 
-total_data_generated = data_generated + data_error
+    total_data_generated = data_generated + data_error
     message_string = "=== END GENERATING WILAYAH DPRD KAB:: generated={}, error={}, total={} data generated, ===".format(data_generated, data_error, total_data_generated)
 
 except Exception as e:
