@@ -5,6 +5,7 @@ import pandas as pd
 import csv
 from Constants import *
 from util_logging_wilayah_dpr import *
+from user_agent import generate_user_agent
 
 def getData(id, indexOf, totalData):
     is_file_created = False
@@ -18,7 +19,8 @@ def getData(id, indexOf, totalData):
         url_link = 'https://infopemilu.kpu.go.id/pileg2019/api/dapil/{}/0?_=1546094148910'.format(id)
         print("requesting .. " + url_link)
         
-        url = urllib.request.urlopen(url_link, context = context,  timeout=10)
+        headers = {'User-Agent': generate_user_agent(device_type="desktop", os=('mac', 'linux'))}
+        url = urllib.request.urlopen(url_link, context = context,  timeout=10, headers=headers)
         datatowrite = url.read()
         
         with open(file_path.format(id), 'wb') as f:
