@@ -29,7 +29,7 @@ def getData(id, indexOf, totalData):
         is_file_created = True
         message_string = "–––––– ({}/{}) idProv = {} generated ––––––".format(indexOf, totalData, id)
     except Exception as e:
-        message_string = "ERROR !!! failed generating idProv = {} ({}/{}) –– cause : {}".format(id, indexOf, totalData, {})
+        message_string = "ERROR !!! failed generating idProv = {} ({}/{}) –– cause : {}".format(id, indexOf, totalData, e)
         is_file_created = False
 
     print(message_string)
