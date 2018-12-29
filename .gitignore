@@ -13,9 +13,9 @@ __pycache__
 .Python
 
 # Hasil generated data
-data_wilayah_dpr/
-data_wilayah_prov/
-data_wilayah_kab/
+#data_wilayah_dpr/
+#data_wilayah_prov/
+#data_wilayah_kab/
 
 
 *.DS_Store
