@@ -19,9 +19,10 @@ def getData(id, indexOf, totalData):
         url_link = 'https://infopemilu.kpu.go.id/pileg2019/api/dapil/{}/0?_=1546094148910'.format(id)
         print("requesting .. " + url_link)
         
-        headers = {'User-Agent': generate_user_agent(device_type="desktop", os=('mac', 'linux'))}
-        req = urllib.request(url_link, headers=headers, context = context, timeout=10)
-        url = urllib.request.urlopen(req)
+#        headers = {'User-Agent': generate_user_agent(device_type="desktop", os=('mac', 'linux'))}
+
+        url = urllib.request.urlopen(url_link, context = context,  timeout=10)
+        
         datatowrite = url.read()
         
         with open(file_path.format(id), 'wb') as f:
