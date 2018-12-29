@@ -1,7 +1,7 @@
 import logging
 
 def pecker(file_name, message_string):
-	logging.basicConfig(filename='log_wilayah_ALL_DATA.log', filemode='a', format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+	logging.basicConfig(filename='log_wilayah_dpr.log', filemode='a', format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 	logging.warning(message_string)
 
 	# logging.basicConfig(filename=file_name, filemode='a', format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
