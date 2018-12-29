@@ -14,3 +14,4 @@ for data in get_provinsi.getData():
 message_string = "====== END :: GENERATE DATA KABUPATEN,  {} data generated ======".format(str(total_data_generated))
 print (message_string)
 pecker(LOG_KABUPATEN_DATA, message_string)
+print (sdakd)
