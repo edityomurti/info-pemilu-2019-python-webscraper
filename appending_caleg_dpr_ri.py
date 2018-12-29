@@ -23,7 +23,6 @@ if data_generated == 0:
 	pecker(LOG_CALEG_DPR_DATA, message_string)
 total_data_generated += data_generated
 
-
 message_string = "======  END :: APPENDING DATA CALEG DPR RI,  {} data generated ======".format(str(total_data_generated))
 print (message_string)
 pecker(LOG_CALEG_DPR_DATA, message_string)
