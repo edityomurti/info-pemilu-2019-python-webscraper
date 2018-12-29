@@ -1,7 +1,8 @@
 # REMOTE FILES
 
 BASE_URL = "https://infopemilu.kpu.go.id/pileg2019/pencalonan/"
-BASE_LOCAL_PATH = "/home/ubuntu/kpu_scrapper/web_scrapping_kpu/"
+BASE_URL_WILAYAH = "https://infopemilu.kpu.go.id/pileg2019/api/wilayah/cari/{}?"
+BASE_LOCAL_PATH = "/home/ubuntu/kpu_scrapper/web_scrapping_kpu/get_wilayah/"
 BASE_HTML_PATH = "/var/www/html/"
 
 URL_WILAYAH_PROV = "0/wilayah.json?"
