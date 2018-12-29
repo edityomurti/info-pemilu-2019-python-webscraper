@@ -10,12 +10,11 @@ from user_agent import generate_user_agent
 def getData(id, indexOf, totalData):
     is_file_created = False
     
-    context = ssl._create_unverified_context()
-    ssl._create_default_https_context = ssl._create_unverified_context
-    
-    file_path = 'data_wilayah_dpr/data_wil_dpr_{}.json'
-    
     try:
+        context = ssl._create_unverified_context()
+        ssl._create_default_https_context = ssl._create_unverified_context
+        
+        file_path = 'data_wilayah_dpr/data_wil_dpr_{}.json'
         url_link = 'https://infopemilu.kpu.go.id/pileg2019/api/dapil/{}/0?_=1546094148910'.format(id)
         print("requesting .. " + url_link)
         
@@ -29,7 +28,7 @@ def getData(id, indexOf, totalData):
         is_file_created = True
         message_string = "–––––– ({}/{}) idProv = {} generated ––––––".format(indexOf, totalData, id)
     except Exception as e:
-        message_string = "ERROR !!! failed generating idProv = {} ({}/{})".format(id, indexOf, totalData)
+        message_string = "ERROR !!! failed generating idProv = {} ({}/{}) –– cause : {}".format(id, indexOf, totalData, {})
         is_file_created = False
 
     print(message_string)
