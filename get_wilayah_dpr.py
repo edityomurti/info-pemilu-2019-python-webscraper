@@ -20,7 +20,8 @@ def getData(id, indexOf, totalData):
         print("requesting .. " + url_link)
         
         headers = {'User-Agent': generate_user_agent(device_type="desktop", os=('mac', 'linux'))}
-        url = urllib.request.urlopen(url_link, context = context,  timeout=10, headers=headers)
+        req = urllib.request(url_link, headers=headers, context = context, timeout=10)
+        url = urllib.request.urlopen(req)
         datatowrite = url.read()
         
         with open(file_path.format(id), 'wb') as f:
