@@ -4,7 +4,6 @@ import json
 import ssl
 import pandas as pd
 import csv
-from Constants import *
 from util_logging_wilayah_prov import *
 
 def getData(id, indexOf, totalData):
@@ -59,11 +58,11 @@ try:
         else:
             data_error += 1
 
-total_data_generated = data_generated + data_error
+    total_data_generated = data_generated + data_error
     message_string = "=== END GENERATING WILAYAH DPRD PROV:: generated={}, error={}, total={} data generated, ===".format(data_generated, data_error, total_data_generated)
 
 except Exception as e:
-    message_string = "ERROR !!! failed generating WILAYAH DPR PROV––{}".format(str(e))
+    message_string = "ERROR !!! failed generating WILAYAH DPRD PROV––{}".format(str(e))
 
 print(message_string)
 pecker("", message_string)
