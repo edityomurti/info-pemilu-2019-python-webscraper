@@ -15,7 +15,7 @@ def getData(id, indexOf, totalData):
         context = ssl._create_unverified_context()
         ssl._create_default_https_context = ssl._create_unverified_context
         
-        file_path = 'data_wilayah_dpr/data_wil_dpr_{}.json'
+        file_path = BASE_LOCAL_PATH + 'data_wilayah_dpr/data_wil_dpr_{}.json'
         url_link = 'https://infopemilu.kpu.go.id/pileg2019/api/dapil/{}/0?_=1546094148910'.format(id)
         print("requesting .. " + url_link)
         
