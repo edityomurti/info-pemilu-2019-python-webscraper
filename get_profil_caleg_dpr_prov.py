@@ -5,17 +5,18 @@ import csv
 import pandas as pd
 from bs4 import BeautifulSoup
 from util_logging import *
+from urllib.error import URLError, HTTPError
 
 
 def getData(indexOf, totalData, idCaleg, idPartai, idDapil, idPro):
 	is_success = False
 	message_string = "getting data id={} ({}/{})".format(idCaleg, indexOf, totalData)
 
-
-	context = ssl._create_unverified_context()
-	url_link = urllib.request.urlopen("https://infopemilu.kpu.go.id/pileg2019/pencalonan/calon/{}".format(idCaleg), context = context)
-
 	try:
+		context = ssl._create_unverified_context()
+		url = "https://infopemilu.kpu.go.id/pileg2019/pencalonan/calon/{}".format(idCaleg)
+		print("requesting {}".format(url))
+		url_link = urllib.request.urlopen(url, context = context)
 		data = url_link.read().decode("utf8")
 
 		THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
@@ -50,6 +51,12 @@ def getData(indexOf, totalData, idCaleg, idPartai, idDapil, idPro):
 
 		is_success = True
 		message_string = "–––––– ({}/{}) idCaleg = {} generated ––––––".format(indexOf, totalData, idCaleg)
+	except HTTPError as e:
+		message_string = "ERROR  !!! failed getting idCaleg = {} ({}/{}) - HTTPError cause : {}".format(idCaleg, indexOf, totalData, e)
+		is_success = False
+	except URLError as e:
+		message_string = "ERROR !!! failed getting idCaleg = {} ({}/{}) - URLError cause : {}".format(idCaleg, indexOf, totalData, e)
+		is_success = False
 	except Exception as e:
 		message_string = "ERROR !!! failed getting idCaleg = {} ({}/{}) - cause : {}".format(idCaleg, indexOf, totalData, e)
 		is_success = False
