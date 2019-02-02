@@ -85,7 +85,7 @@ try:
 
 	for i,idCaleg in enumerate(id_list):
 		if (getData(str(i+1), str(len(id_list)), str(idCaleg), idPartai_list[i], idDapil_list[i], idPro_list[i])):
-			data_generated +1
+			data_generated += 1
 		else:
 			data_error += 1
 
