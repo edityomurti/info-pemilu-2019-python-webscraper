@@ -40,12 +40,12 @@ def getData(indexOf, totalData, idCaleg, idPartai, idDapil, idPro):
 			headers = ['id', 'idPartai', 'idDapil', 'idPro']
 			headersData = [header.find("div", {'class' : 'col-sm-3'}).text for header in listData]
 			headers.extend(headersData)
-			f = open('data_profil_caleg_prov.csv', 'w')
+			f = open('data_profil_caleg_kab.csv', 'w')
 			writer = csv.writer(f)
 			writer.writerow(headers)
 			writer.writerow(content)
 		else:
-			f = open('data_profil_caleg_prov.csv', 'a')
+			f = open('data_profil_caleg_kab.csv', 'a')
 			writer = csv.writer(f)
 			writer.writerow(content)
 
@@ -70,7 +70,7 @@ try:
 	data_generated = 0
 	data_error = 0
 
-	csv_file = 'data_caleg_prov.csv'
+	csv_file = 'data_caleg_kab.csv'
 	df = pd.read_csv(csv_file)
 
 	id_list = df['id'].tolist()
@@ -78,7 +78,7 @@ try:
 	idDapil_list = df['idDapil'].tolist()
 	idPro_list = df['idPro'].tolist()
 
-	message_string = "=== START GENERATING PROFIL CALEG DPRD PROV ==="
+	message_string = "=== START GENERATING PROFIL CALEG DPRD KABUPATEN ==="
 
 	print(message_string)
 	pecker("", message_string)
@@ -90,10 +90,10 @@ try:
 			data_error += 1
 
 	total_data_generated = data_generated + data_error
-	message_string = "=== END GENERATING PROFIL CALEG DPRD PROV:: generated={}, error={}, total={} data generated ===".format(data_generated, data_error, total_data_generated)
+	message_string = "=== END GENERATING PROFIL CALEG DPRD KABUPATEN:: generated={}, error={}, total={} data generated ===".format(data_generated, data_error, total_data_generated)
 
 except Exception as e:
-	message_string = "ERROR !!! Failed generating profil caleg dprd prov –– {}".format(str(e))
+	message_string = "ERROR !!! Failed generating profil caleg dprd KABUPATEN –– {}".format(str(e))
 
 print(message_string)
 pecker("", message_string)
